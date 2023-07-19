@@ -9,16 +9,18 @@
   </head>
 
   <body id="body" class="font-[Georgia]">
-    <main class="container mx-auto py-14 px-7">
+    <main class="container mx-auto py-14 px-7 sm:px-60">
       <section class="grid row-auto gap-4 sm:grid-cols-3">
-        <div>
-          <div class="px-7 pb-2 place-item-center sm:grid-start-1">
+        <div class="place-self-center sm:col-start-1">
+          <div class="px-7 pb-2 sm:px-10">
             <img src="images/profile/profile_pic.jpg" class="rounded-lg" />
             <center>Email: jlr429@cornell.edu</center>
           </div>
         </div>
-        <div class="space-y-3">
-          <h1 class="font-bold text-3xl sm:grid-start-2 sm:col-span-full">
+        <div
+          class="space-y-3 place-self-center sm:col-start-2 sm:col-span-full"
+        >
+          <h1 class="font-bold text-3xl">
             Juntao Ren
           </h1>
           <p class="text-base leading-relaxed">
@@ -49,7 +51,7 @@
               >Cornell University Artificial Intelligence (CUAI)</a
             >.
           </p>
-          <div class="grid grid-cols-3 gap-4 justify-items-center px-10">
+          <div class="grid grid-cols-3 gap-4 place-self-center px-10">
             <!-- Email -->
             <a href="mailto:jlr429@cornell.edu">
               <svg
@@ -111,13 +113,20 @@
           </div>
         </div>
       </section>
+
       <hr class="my-8" />
-      <section class="grid row-auto">
+
+      <section class="grid row-auto sm:px-7">
         <h1 class="font-bold text-2xl">Publications</h1>
         <p class="text-base leading-tight">* indicates equal contribution</p>
-        <div class="flex mt-8 grid row-auto gap-2">
-          <img src="images/projects/clip_dn.jpg" class="w-48 h-auto" />
-          <div class="text-base">
+        <div
+          class="grid row-auto gap-2 flex mt-8 place-items-center sm:grid-col-2"
+        >
+          <img
+            src="images/projects/clip_dn.jpg"
+            class="w-48 h-auto sm:col-start-1 sm: w-60"
+          />
+          <div class="text-base sm:col-start-2 sm:pl-8">
             <p class="font-bold text-lg">
               Test-Time Distribution Normalization for Contrastively Learned
               Visual-language Models
