@@ -4,92 +4,149 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="./images/favicon.ico" />
     <title>Juntao Ren</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap");
-    </style>
   </head>
 
-  <body id="body" class="font-body">
-    <div class="container mx-auto pt-8 px-4 sm:px-8">
-      <div class="mx-2 sm:mx-auto sm:max-w-2xl">
-        <div class="grid grid-cols-3 grid-flow-col gap-4 place-items-center">
-          <div class="col-span-1">
-            <div class="flex px-5">
-              <img
-                src="images/profile/profile_pic.jpg"
-                class="rounded-lg h-auto"
-              />
-            </div>
-          </div>
-          <div class="col-span-2 space-y-5">
-            <div class="font-bold text-3xl">
-              Juntao Ren
-            </div>
-            <p class="text-lg leading-relaxed">
-              I am a junior at Cornell University studying Computer Science and
-              Mathematics. I am interested in the application and improvement of
-              reinforcement learning algorithms, and its applications in
-              robotics. I am part of the ambitious
-              <a href="https://portal.cs.cornell.edu/" class="text-cyan-500"
-                >People and Robot Teaching and Learning (PoRTaL) Group</a
-              >
-              advised by
-              <a href="https://www.sanjibanchoudhury.com/" class="text-cyan-500"
-                >Sanjiban Choudhury</a
-              >, and co-president of
-              <a href="https://cuai.github.io/" class="text-cyan-500"
-                >Cornell University Artificial Intelligence (CUAI</a
-              >.
-            </p>
-          </div>
-        </div>
-        <hr class="my-8" />
+  <body id="body" class="font-[Georgia]">
+    <main class="container mx-auto py-14 px-7">
+      <section class="grid row-auto gap-4 sm:grid-cols-3">
         <div>
-          <div class="font-bold text-3xl mb-4">Publications</div>
-          <div>* indicates equal contribution</div>
-          <div class="flex mt-8">
-            <div class="mr-8">
-              <img src="images/projects/clip_dn.jpg" class="w-48 h-auto" />
-            </div>
-            <div>
-              <div class="font-bold text-xl mb-2">
-                Test-Time Distribution Normalization for Contrastively Learned
-                Visual-language Models
-              </div>
-              <div>
-                Preprint
-              </div>
-              <div>
-                Yifei Zhou*, <b>Juntao Ren*</b>, Fengyu Li*, Ramin Zabih,
-                Ser-Nam Lim
-              </div>
-              <div>
-                <a
-                  href="https://doi.org/10.48550/arXiv.2302.11084"
-                  class="text-cyan-500"
-                  >[Paper]</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="flex mt-8">
-            <div class="mr-8">
-              <img src="images/projects/second_image.jpg" class="w-32 h-auto" />
-            </div>
-            <div>
-              <div class="font-bold text-xl mb-2">
-                Second Image Title
-              </div>
-              <div>
-                Description of the second image.
-              </div>
-            </div>
+          <div class="px-7 pb-2 place-item-center sm:grid-start-1">
+            <img src="images/profile/profile_pic.jpg" class="rounded-lg" />
+            <center>Email: jlr429@cornell.edu</center>
           </div>
         </div>
-      </div>
-    </div>
+        <div class="space-y-3">
+          <h1 class="font-bold text-3xl sm:grid-start-2 sm:col-span-full">
+            Juntao Ren
+          </h1>
+          <p class="text-base leading-relaxed">
+            I am a junior at Cornell University studying Computer Science and
+            Mathematics. I am interested in the application and improvement of
+            reinforcement learning algorithms, and its applications in robotics.
+            I am part of the ambitious
+            <a
+              href="https://portal.cs.cornell.edu/"
+              class="text-cyan-500"
+              target="_blank"
+              rel="noopener noreferrer"
+              >People and Robot Teaching and Learning (PoRTaL) Group</a
+            >
+            advised by
+            <a
+              href="https://www.sanjibanchoudhury.com/"
+              class="text-cyan-500"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Sanjiban Choudhury</a
+            >, and co-president of
+            <a
+              href="https://cuai.github.io/"
+              class="text-cyan-500"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Cornell University Artificial Intelligence (CUAI)</a
+            >.
+          </p>
+          <div class="grid grid-cols-3 gap-4 justify-items-center px-10">
+            <!-- Email -->
+            <a href="mailto:jlr429@cornell.edu">
+              <svg
+                class="h-8 w-8 text-black"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </a>
+            <!-- Linkedin -->
+            <a
+              href="www.linkedin.com/in/juntaoren"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="h-8 w-8 text-black"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <!-- Github -->
+            <a
+              href="https://github.com/jren03"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="h-8 w-8 text-black"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <hr class="my-8" />
+      <section class="grid row-auto">
+        <h1 class="font-bold text-2xl">Publications</h1>
+        <p class="text-base leading-tight">* indicates equal contribution</p>
+        <div class="flex mt-8 grid row-auto gap-2">
+          <img src="images/projects/clip_dn.jpg" class="w-48 h-auto" />
+          <div class="text-base">
+            <p class="font-bold text-lg">
+              Test-Time Distribution Normalization for Contrastively Learned
+              Visual-language Models
+            </p>
+            <p>
+              Preprint
+            </p>
+            <p>
+              Yifei Zhou*, <b>Juntao Ren*</b>, Fengyu Li*, Ramin Zabih, Ser-Nam
+              Lim
+            </p>
+            <a
+              href="https://doi.org/10.48550/arXiv.2302.11084"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-cyan-500"
+              >[Paper]</a
+            >
+            &middot;
+            <a
+              href="https://github.com/fengyuli-dev/distribution-normalization"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-cyan-500"
+              >[Code]</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
