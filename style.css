@@ -139,16 +139,3 @@ a.cyan:hover { text-decoration: underline; }
   margin-bottom: .05rem;
   line-height: 1.3;
 }
-
-/* =======================
-   Title link styling
-   ======================= */
-.title-link {
-  color: var(--title-blue);   /* slightly darker, vibrant blue */
-  font-weight: 600;           /* bold-ish */
-  text-decoration: none;
-}
-.title-link:hover {
-  color: #1c3d99;             /* gentle darken on hover */
-  text-decoration: underline;
-}
