@@ -3,7 +3,7 @@
   <head>
     <!-- Google tag (gtag.js) -->
     <script
-      async
+      async=""
       src="https://www.googletagmanager.com/gtag/js?id=G-T9FZND2MVN"
     ></script>
     <script>
@@ -12,34 +12,32 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-T9FZND2MVN");
     </script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="./images/favicon.ico" />
 
-    <style>
-      body {
-        font-family: Palatino, "Palatino Linotype", Georgia, serif;
-      }
-    </style>
+    <link rel="icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
 
     <title>Juntao Ren</title>
   </head>
 
   <body>
-    <main class="container mx-auto py-14 px-7 max-w-5xl sm:px-20">
-      <hr class="h-0.5 mx-auto my-4 bg-gray-200 border-0 rounded" />
-      <section class="grid row-auto gap-4 sm:grid-cols-3">
-        <div class="place-self-center sm:col-start-1">
-          <div class="px-7 pb-2 sm:px-10">
+    <main class="main">
+      <hr class="rule" />
+
+      <!-- =========================
+           Intro (3-column at sm+)
+           ========================= -->
+      <section class="intro-grid">
+        <div class="profile-col">
+          <div class="profile-wrap">
             <div class="image-container">
               <img
                 src="images/profile/profile_pic.jpg"
-                class="rounded-lg drop-shadow-md profile-image"
+                class="profile-image"
                 alt="Juntao Ren Profile Picture"
               />
             </div>
@@ -47,54 +45,16 @@
           </div>
         </div>
 
-        <style>
-          .image-container {
-            width: 200px; /* Set your desired fixed width */
-            height: 250px; /* Set your desired fixed height */
-            overflow: hidden; /* Hide any overflowing parts of the image */
-            display: flex; /* Use flexbox to center the image if needed (though object-fit handles most) */
-            justify-content: center;
-            align-items: center;
-            border-radius: 8px; /* Apply border-radius to the container for consistent cropping */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-              0 2px 4px -2px rgba(0, 0, 0, 0.1); /* Replicate drop-shadow on container */
-          }
+        <div class="intro-col">
+          <h1 class="title">Juntao Ren</h1>
 
-          .profile-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* This is the magic! Crops proportionally to cover the container */
-            /* Remove rounded-lg and drop-shadow-md from here as they are applied to the container */
-            border-radius: inherit; /* Inherit border-radius from parent for smooth cropping */
-            transform: scale(1); /* Adjust this value to zoom in more or less */
-            transform-origin: center center; /* Ensure the zoom is centered */
-          }
-
-          /* Add or ensure the main container has these styles */
-          .flex {
-            display: flex;
-          }
-
-          .items-center {
-            align-items: center; /* Vertically centers items in a flex container */
-          }
-
-          .flex-grow {
-            flex-grow: 1; /* Allows this item to take up available space */
-          }
-        </style>
-
-        <div class="space-y-3 place-self-center sm:col-start-2 col-span-full">
-          <h1 class="font-bold text-3xl">
-            Juntao Ren
-          </h1>
-          <p class="text-base leading-relaxed">
+          <p class="lead">
             I am a PhD student at Stanford University. I enjoy thinking about
             how we can enable robots to learn and reason over time in the
             physical world. I am grateful to be supported by the
             <a
               href="https://knight-hennessy.stanford.edu/"
-              class="text-cyan-500"
+              class="cyan"
               target="_blank"
               rel="noopener noreferrer"
               >Knight-Hennessy Fellowship</a
@@ -102,27 +62,26 @@
             and the
             <a
               href="https://www.nsf.gov/funding/opportunities/grfp-nsf-graduate-research-fellowship-program"
-              class="text-cyan-500"
+              class="cyan"
               target="_blank"
               rel="noopener noreferrer"
+              >NSF Graduate Research Fellowship.</a
             >
-              NSF Graduate Research Fellowship.
-            </a>
           </p>
 
-          <p class="text-base leading-relaxed">
+          <p class="lead">
             I completed my undergrad in Computer Science and Mathematics at
             Cornell University, where I am grateful to have worked with
             <a
               href="https://www.sanjibanchoudhury.com/"
-              class="text-cyan-500"
+              class="cyan"
               target="_blank"
               rel="noopener noreferrer"
               >Prof. Sanjiban Choudhury</a
             >. I've also spent time at
             <a
               href="https://www.1x.tech/"
-              class="text-cyan-500"
+              class="cyan"
               target="_blank"
               rel="noopener noreferrer"
               >1X Technologies</a
@@ -130,22 +89,20 @@
             working on
             <a
               href="https://www.1x.tech/discover/redwood-ai-world-model"
-              class="text-cyan-500"
+              class="cyan"
               target="_blank"
               rel="noopener noreferrer"
               >World Models</a
             >.
           </p>
 
-          <p class="text-base leading-relaxed">
-            Please feel free to reach out!
-          </p>
+          <p class="lead">Please feel free to reach out!</p>
 
-          <div class="grid grid-cols-5 gap-4 justify-items-center px-10">
+          <div class="icon-grid">
             <!-- Email -->
-            <a href="mailto:renjt@stanford.edu">
+            <a href="mailto:renjt@stanford.edu" aria-label="Email">
               <svg
-                class="h-8 w-8 text-black"
+                class="icon"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -163,9 +120,10 @@
               href="https://github.com/jren03"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub"
             >
               <svg
-                class="h-8 w-8 text-black"
+                class="icon"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -183,9 +141,10 @@
               href="https://www.linkedin.com/in/juntaoren"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn"
             >
               <svg
-                class="h-8 w-8 text-black"
+                class="icon"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -200,14 +159,15 @@
                 <circle cx="4" cy="4" r="2" />
               </svg>
             </a>
-            <!-- Twitter -->
+            <!-- Twitter/X -->
             <a
               href="https://twitter.com/JuntaoRen"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Twitter"
             >
               <svg
-                class="h-8 w-8 text-black"
+                class="icon"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -216,18 +176,19 @@
                 stroke-linejoin="round"
               >
                 <path
-                  d="M8.145 21.449c-2.15 0-4.638-.552-7.39-2.097-.208-.117-.304-.364-.23-.59s.297-.375.533-.342c1.814.208 3.795-.217 5.275-1.086-1.695-.398-3.065-1.499-3.788-3.098a.499.499 0 0 1 .08-.536c.13-.148.334-.205.522-.148.218.067.435.113.644.138-1.287-.768-2.665-2.238-2.665-4.441a.5.5 0 0 1 .814-.389c.16.13.331.239.508.325a5.362 5.362 0 0 1-.869-1.817c-.332-1.282-.139-2.582.557-3.756a.501.501 0 0 1 .821-.057c1.472 1.839 4.088 4.061 8.294 4.466-.078-1.331.322-3.512 2.16-4.585 2.261-1.32 4.436-1.15 6.305.487.828-.184 2.135-.752 2.406-.941a.5.5 0 0 1 .77.538c-.125.471-.408.995-.76 1.463.279-.083.514-.167.639-.231a.5.5 0 0 1 .652.711c-.588.93-1.539 1.796-2.174 2.266.343 4.225-2.126 8.946-6.089 11.577-1.47.975-3.886 2.143-7.015 2.143zM3.15 19.406c5.351 2.195 9.403.428 11.456-.935 3.756-2.494 6.067-6.988 5.62-10.929a.498.498 0 0 1 .222-.474c.269-.177.68-.502 1.094-.905-.407.088-.802.147-1.089.148-.276-.033-.447-.169-.492-.405a.498.498 0 0 1 .306-.559c.283-.113.665-.454.995-.872-.566.219-1.178.413-1.628.478a.497.497 0 0 1-.413-.131c-1.578-1.482-3.362-1.658-5.306-.524-1.745 1.02-1.784 3.397-1.6 4.148a.499.499 0 0 1-.513.619C7.331 8.829 4.427 6.719 2.68 4.773a3.808 3.808 0 0 0-.132 2.344c.294 1.133 1.034 2.002 1.596 2.33a.5.5 0 0 1-.153.922 3.106 3.106 0 0 1-1.752-.185c.521 2.085 2.689 3.067 3.299 3.135a.501.501 0 0 1 .268.879c-.437.369-1.091.547-1.828.51.836 1.114 2.132 1.754 3.681 1.788a.5.5 0 0 1 .323.872c-1.228 1.1-2.99 1.823-4.832 2.038z"
-                ></path>
+                  d="M8.145 21.449c-2.15 0-4.638-.552-7.39-2.097-.208-.117-.304-.364-.23-.59s.297-.375.533-.342c1.814.208 3.795-.217 5.275-1.086-1.695-.398-3.065-1.499-3.788-3.098a.499.499 0 0 1 .08-.536c.13-.148.334-.205.522-.148.218.067.435.113.644.138-1.287-.768-2.665-2.238-2.665-4.441a.5.5 0 0 1 .814-.389c.16.13.331.239.508.325a5.362 5.362 0 0 1-.869-1.817c-.332-1.282-.139-2.582.557-3.756a.501.501 0 0 1 .821-.057c1.472 1.839 4.088 4.061 8.294 4.466-.078-1.331.322-3.512 2.16-4.585 2.261-1.32 4.436-1.15 6.305.487.828-.184 2.135-.752 2.406-.941a.5.5 0 0 1 .77.538c-.125.471-.408.995-.76 1.463.279-.083.514-.167.639-.231a.5.5 0 0 1 .652.711c-.588.93-1.539 1.796-2.174 2.266.343 4.225-2.126 8.946-6.089 11.577-1.47.975-3.886 2.143-7.015 2.143z"
+                />
               </svg>
             </a>
-            <!-- GScholar -->
+            <!-- Google Scholar -->
             <a
               href="https://scholar.google.com/citations?user=7Z1x5zwAAAAJ&hl=en&oi=ao"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Google Scholar"
             >
               <svg
-                class="h-8 w-8 text-black"
+                class="icon"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -237,266 +198,296 @@
               >
                 <path
                   d="M 11 4 L 3 9 L 8.4921875 9 C 8.4715892 9.0754986 8.4383718 9.1441171 8.421875 9.2226562 C 8.375875 9.4646562 8.3398437 9.7308125 8.3398438 10.007812 C 8.3398438 13.578812 11.990234 13.175781 11.990234 13.175781 L 11.990234 14.085938 C 11.990234 14.454937 12.47425 14.327172 12.53125 15.076172 C 12.28925 15.076172 7.4746094 14.937547 7.4746094 18.185547 C 7.4746094 21.445547 11.724609 21.285156 11.724609 21.285156 C 11.724609 21.285156 16.632812 21.504656 16.632812 17.472656 C 16.634813 15.063656 13.822266 14.2795 13.822266 13.3125 C 13.822266 12.3335 15.941406 12.045906 15.941406 9.7539062 C 15.941406 8.7519062 15.872828 8.03825 15.423828 7.53125 C 15.388828 7.49625 15.366031 7.4722188 15.332031 7.4492188 C 15.324304 7.4420199 15.31448 7.4367774 15.306641 7.4296875 L 15.429688 7.4296875 L 17.5 5.8769531 L 17.5 8 A 0.50005 0.50005 0 0 0 17.511719 8.1152344 A 1.0001 1.0001 0 0 0 17 9 L 17 10 A 1.0001 1.0001 0 1 0 19 10 L 19 9 A 1.0001 1.0001 0 0 0 18.488281 8.1152344 A 0.50005 0.50005 0 0 0 18.5 8 L 18.5 5.125 L 20 4 L 11 4 z M 11.691406 7.0527344 C 11.979219 7.0397031 12.268922 7.109625 12.544922 7.265625 C 12.751922 7.369625 12.946141 7.518125 13.119141 7.703125 C 13.476141 8.060125 13.7765 8.5784531 13.9375 9.1894531 C 14.3175 10.640453 13.823828 12.035781 12.798828 12.300781 C 11.784828 12.587781 10.654672 11.641172 10.263672 10.201172 C 10.090672 9.4991719 10.114547 8.8202969 10.310547 8.2792969 C 10.312395 8.2723193 10.316443 8.2666961 10.318359 8.2597656 C 10.321722 8.2581149 10.32682 8.253536 10.330078 8.2519531 C 10.386262 8.0380596 10.478099 7.8461668 10.589844 7.6875 C 10.795388 7.3872165 11.066477 7.1838352 11.404297 7.09375 C 11.499297 7.07075 11.595469 7.0570781 11.691406 7.0527344 z M 12.082031 15.685547 C 13.775031 15.558547 15.216313 16.490813 15.320312 17.757812 C 15.390313 19.013813 14.087812 20.131094 12.382812 20.246094 C 10.689813 20.361094 9.2274844 19.441547 9.1464844 18.185547 C 9.0654844 16.918547 10.377031 15.812547 12.082031 15.685547 z"
-                ></path>
+                />
               </svg>
             </a>
           </div>
         </div>
       </section>
 
-      <!--Publications-->
-      <hr class="h-0.5 mx-auto my-4 bg-gray-200 border-0 rounded" />
+      <!-- =========================
+           Publications
+           ========================= -->
+      <hr class="rule" />
+      <section class="section">
+        <h2>Publications</h2>
+        <p class="note">* indicates equal contribution</p>
 
-      <section class="grid row-auto sm:px-7">
-        <h1 class="font-bold text-2xl">Publications</h1>
-        <p class="text-base leading-tight">* indicates equal contribution</p>
-
-        <div class="flex flex-col sm:flex-row gap-6 mt-8 items-center">
-          <div
-            class="w-full sm:w-64 flex-shrink-0 flex justify-center items-center"
-          >
+        <!-- SAILOR -->
+        <div class="pub-row">
+          <div class="media">
             <img
               src="images/projects/sailor.gif"
-              class="w-full max-w-60 h-auto"
+              alt="SAILOR project animation"
             />
           </div>
-          <div class="text-base flex-1 sm:w-96">
-            <p class="font-bold text-lg">
-              A Smooth Sea Never Made a Skilled SAILOR: Robust Imitation via
-              Learning to Search
+          <div class="pub pub-tight">
+            <p class="title links">
+              <a
+                href="https://gokul.dev/sailor/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                A Smooth Sea Never Made a Skilled SAILOR: Robust Imitation via
+                Learning to Search
+              </a>
             </p>
-            <p>
-              <i> In Submission, 2025. </i>
-            </p>
-            <p>
+            <p class="authors">
               Arnav Kumar Jain*, Vibhakar Mohta*, Subin Kim, Atiksh Bhardwaj,
               <b>Juntao Ren</b>, Yunhai Feng, Sanjiban Choudhury, Gokul Swamy
             </p>
-            <a
-              href="https://arxiv.org/abs/2506.05294"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-cyan-500"
-              >[Paper]</a
-            >
-            &middot;
-            <a
-              href="https://gokul.dev/sailor/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-cyan-500"
-              >[Website]</a
-            >
-            &middot;
-            <a
-              href="https://github.com/arnavkj1995/SAILOR"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-cyan-500"
-              >[Code]</a
-            >
+            <p class="meta">In Submission, 2025.</p>
+            <p class="links">
+              <a
+                href="https://arxiv.org/abs/2506.05294"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Paper</a
+              >
+              <span class="dot">&middot;</span>
+              <a
+                href="https://gokul.dev/sailor/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Website</a
+              >
+              <span class="dot">&middot;</span>
+              <a
+                href="https://github.com/arnavkj1995/SAILOR"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Code</a
+              >
+            </p>
+            <p class="pub-summary">
+              TL;DR &mdash; We train both world and reward models from
+              demonstration data, giving the agent the ability to reason about
+              how to recover from mistakes at test time.
+            </p>
           </div>
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-6 mt-8 items-center">
-          <div
-            class="w-full sm:w-64 flex-shrink-0 flex justify-center items-center"
-          >
+        <!-- Motion Tracks -->
+        <div class="pub-row">
+          <div class="media">
             <video
               src="images/projects/triangulation.mp4"
-              class="w-full max-w-60 h-auto"
               autoplay
               muted
               loop
+              title="Motion Tracks demo"
             ></video>
           </div>
-          <div class="text-base flex-1 sm:w-96">
-            <p class="font-bold text-lg">
-              Motion Tracks: A Unified Representation for Human-Robot Transfer
-            </p>
-            <p>
-              <i
-                >International Conference on Robotics and Automation (ICRA),
-                2025.</i
+          <div class="pub pub-tight">
+            <p class="title links">
+              <a
+                href="https://portal.cs.cornell.edu/motion_track_policy/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
+                Motion Tracks: A Unified Representation for Human-Robot Transfer
+              </a>
             </p>
-            <p>
+            <p class="authors">
               <b>Juntao Ren</b>, Priya Sundaresan, Dorsa Sadigh, Sanjiban
               Choudhury, Jeannette Bohg
             </p>
-            <a
-              href="https://arxiv.org/abs/2501.06994"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-cyan-500"
-              >[Paper]</a
-            >
-            &middot;
-            <a
-              href="https://portal.cs.cornell.edu/motion_track_policy/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-cyan-500"
-              >[Website]</a
-            >
+            <p class="meta">
+              International Conference on Robotics and Automation (ICRA), 2025.
+            </p>
+            <p class="links">
+              <a
+                href="https://arxiv.org/abs/2501.06994"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Paper</a
+              >
+              <span class="dot">&middot;</span>
+              <a
+                href="https://portal.cs.cornell.edu/motion_track_policy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Website</a
+              >
+            </p>
+            <p class="pub-summary">
+              TL;DR &mdash; We propose a unified action space by representing
+              actions as 2D trajectories on an image, enabling robots to
+              directly imitate from cross-embodiment datasets.
+            </p>
           </div>
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-6 mt-8 items-center">
-          <div
-            class="w-full sm:w-64 flex-shrink-0 flex justify-center items-center"
-          >
-            <img
-              src="images/projects/hyper.png"
-              class="w-full max-w-60 h-auto"
-            />
+        <!-- Hybrid IRL -->
+        <div class="pub-row">
+          <div class="media">
+            <img src="images/projects/hyper.png" alt="Hybrid IRL figure" />
           </div>
-          <div class="text-base flex-1 sm:w-96">
-            <p class="font-bold text-lg">
-              Hybrid Inverse Reinforcement Learning
+          <div class="pub pub-tight">
+            <p class="title links">
+              <a
+                href="https://gokul.dev/hyper/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hybrid Inverse Reinforcement Learning
+              </a>
             </p>
-            <p>
-              <i>International Conference on Machine Learning (ICML), 2024.</i>
-            </p>
-            <p>
+            <p class="authors">
               <b>Juntao Ren*</b>, Gokul Swamy*, Steven Wu, Drew Bagnell,
               Sanjiban Choudhury
             </p>
-            <a
-              href="https://arxiv.org/abs/2402.08848"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-cyan-500"
-              >[Paper]</a
-            >
-            &middot;
-            <a
-              href="https://gokul.dev/hyper/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-cyan-500"
-              >[Website]</a
-            >
-            &middot;
-            <a
-              href="https://github.com/jren03/garage/tree/main"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-cyan-500"
-              >[Code]</a
-            >
-            &middot;
-            <a
-              href="https://www.youtube.com/watch?v=9zO3PaQ1nPs"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-cyan-500"
-              >[Video]</a
-            >
+            <p class="meta">
+              International Conference on Machine Learning (ICML), 2024.
+            </p>
+            <p class="links">
+              <a
+                href="https://arxiv.org/abs/2402.08848"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Paper</a
+              >
+              <span class="dot">&middot;</span>
+              <a
+                href="https://gokul.dev/hyper/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Website</a
+              >
+              <span class="dot">&middot;</span>
+              <a
+                href="https://github.com/jren03/garage/tree/main"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Code</a
+              >
+              <span class="dot">&middot;</span>
+              <a
+                href="https://www.youtube.com/watch?v=9zO3PaQ1nPs"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Video</a
+              >
+            </p>
+            <p class="pub-summary">
+              TL;DR &mdash; We show that training on both expert and learning
+              data can provably speed up interactive imitation learning in the
+              absence of rewards, for both model-free and model-based
+              algorithms.
+            </p>
           </div>
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-6 mt-8 items-center">
-          <div
-            class="w-full sm:w-64 flex-shrink-0 flex justify-center items-center"
-          >
+        <!-- MOSAIC -->
+        <div class="pub-row">
+          <div class="media">
             <img
               src="images/projects/mosaic.gif"
-              class="w-full max-w-60 h-auto"
+              alt="MOSAIC project animation"
             />
           </div>
-          <div class="text-base flex-1 sm:w-96">
-            <p class="font-bold text-lg">
-              MOSAIC: A Modular System for Assistive and Interactive Cooking.
+          <div class="pub pub-tight">
+            <p class="title links">
+              <a
+                href="https://portal.cs.cornell.edu/MOSAIC/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                MOSAIC: A Modular System for Assistive and Interactive Cooking.
+              </a>
             </p>
-            <p>
-              <i>Conference on Robot Learning (CORL), 2024.</i>
-            </p>
-            <p>
+            <p class="authors">
               Huaxiaoyue Wang*, Kushal Kedia*, <b>Juntao Ren*</b>, Rahma
               Abdullah, Atiksh Bhardwaj, Angela Chao, Kelly Y Chen, Nathaniel
               Chin, Prithwish Dan, Xinyi Fan, Gonzalo Gonzalez-Pumariega, Aditya
               Kompella, Maximus Adrian Pace, Yash Sharma, Xiangwan Sun, Neha
               Sunkara, and Sanjiban Choudhury
             </p>
-            <a
-              href="https://arxiv.org/abs/2402.18796"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-cyan-500"
-              >[Paper]</a
-            >
-            &middot;
-            <a
-              href="https://portal.cs.cornell.edu/MOSAIC/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-cyan-500"
-              >[Website]</a
-            >
-            &middot;
-            <a
-              href="https://www.youtube.com/watch?v=5VXUoytToAM&t=1h14m44s"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-cyan-500"
-              >[Video]</a
-            >
+            <p class="meta">Conference on Robot Learning (CoRL), 2024.</p>
+            <p class="links">
+              <a
+                href="https://arxiv.org/abs/2402.18796"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Paper</a
+              >
+              <span class="dot">&middot;</span>
+              <a
+                href="https://portal.cs.cornell.edu/MOSAIC/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Website</a
+              >
+              <span class="dot">&middot;</span>
+              <a
+                href="https://www.youtube.com/watch?v=5VXUoytToAM&t=1h14m44s"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Video</a
+              >
+            </p>
+            <p class="pub-summary">
+              TL;DR &mdash; We build a top-down modular system to allow for
+              human-robot collaboration within the kitchen using high-level
+              planners, low-level visuomotor policies, and human-motion
+              forecasting.
+            </p>
           </div>
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-6 mt-8 items-center">
-          <div
-            class="w-full sm:w-64 flex-shrink-0 flex justify-center items-center"
-          >
+        <!-- CLIP DN -->
+        <div class="pub-row">
+          <div class="media">
             <img
               src="images/projects/clip_dn.jpg"
-              class="w-full max-w-60 h-auto"
+              alt="Distribution Normalization figure"
             />
           </div>
-          <div class="text-base flex-1 sm:w-96">
-            <p class="font-bold text-lg">
-              Test-Time Distribution Normalization for Contrastively Learned
-              Visual-language Models.
+          <div class="pub pub-tight">
+            <p class="title links">
+              <a
+                href="https://fengyuli-dev.github.io/dn-website/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Test-Time Distribution Normalization for Contrastively Learned
+                Visual-language Models.
+              </a>
             </p>
-            <p>
-              <i>Neural Information Processing Systems (NeurIPS), 2023.</i>
-            </p>
-            <p>
+            <p class="authors">
               Yifei Zhou*, <b>Juntao Ren*</b>, Fengyu Li*, Ramin Zabih, Ser-Nam
               Lim
             </p>
-            <a
-              href="https://doi.org/10.48550/arXiv.2302.11084"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-cyan-500"
-              >[Paper]</a
-            >
-            &middot;
-            <a
-              href="https://fengyuli-dev.github.io/dn-website/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-cyan-500"
-              >[Website]</a
-            >
-            &middot;
-            <a
-              href="https://github.com/fengyuli-dev/distribution-normalization"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-cyan-500"
-              >[Code]</a
-            >
-            &middot;
-            <a
-              href="/documents/dn_slides.pdf"
-              target="_blank"
-              class="text-cyan-500"
-              >[Slides]</a
-            >
-            <!-- video: https://recorder-v3.slideslive.com/?share=87327&s=e2591762-80f7-4e46-b29c-aca8fd88f4b3 -->
+            <p class="meta">
+              Neural Information Processing Systems (NeurIPS), 2023.
+            </p>
+            <p class="links">
+              <a
+                href="https://doi.org/10.48550/arXiv.2302.11084"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Paper</a
+              >
+              <span class="dot">&middot;</span>
+              <a
+                href="https://fengyuli-dev.github.io/dn-website/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Website</a
+              >
+              <span class="dot">&middot;</span>
+              <a
+                href="https://github.com/fengyuli-dev/distribution-normalization"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Code</a
+              >
+            </p>
+            <p class="pub-summary">
+              TL;DR &mdash; We prove that subtracting the mean of the image and
+              language embeddings at test-time from each sample better aligns
+              with the training-objective and improves performance.
+            </p>
           </div>
         </div>
       </section>
