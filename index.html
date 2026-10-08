@@ -18,6 +18,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta
+      name="description"
+      content="Juntao Ren is a Ph.D. student at Stanford University working on robot learning."
+    />
+    <meta property="og:title" content="Juntao Ren" />
+    <meta
+      property="og:description"
+      content="Ph.D. student at Stanford University working on robot learning."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jren03.github.io/" />
+    <meta property="og:image" content="https://jren03.github.io/images/profile/profile_pic.jpg" />
+
     <link rel="icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="style.css" />
 
@@ -39,12 +52,11 @@
                 src="images/profile/profile_pic.jpg"
                 class="profile-image"
                 alt="Juntao Ren Profile Picture"
+                width="600"
+                height="905"
               />
             </div>
-            <br />
-            <center style="font-size: 0.9em;">
-              Email: juntao.ren@stanford.edu
-            </center>
+            <p class="email">Email: juntao.ren@stanford.edu</p>
           </div>
         </div>
 
@@ -231,10 +243,62 @@
         <h2>Publications</h2>
         <p class="note">* indicates equal contribution</p>
 
+        <!-- NEEDLEwork -->
+        <div class="pub-row">
+          <div class="media">
+            <img
+              src="images/projects/needlework.png"
+              alt="NEEDLEwork teaser figure"
+            />
+          </div>
+          <div class="pub pub-tight">
+            <p class="title links">
+              <a
+                href="https://needle-work.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                NEEDLEwork: Offline Rewriting of Robot Data with Verified Local
+                Stitches
+              </a>
+            </p>
+            <p class="authors"><b>Juntao Ren</b>, Yifan Hou, Shuran Song</p>
+            <p class="meta">In Submission.</p>
+            <p class="links">
+              <a
+                href="https://arxiv.org/abs/2610.02339"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Paper</a
+              >
+              <span class="dot">&middot;</span>
+              <a
+                href="https://needle-work.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Website</a
+              >
+              <span class="dot">&middot;</span>
+              <a
+                href="https://github.com/needle-work/needlework"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Code</a
+              >
+            </p>
+            <p class="pub-summary">
+              TL;DR &mdash; We study how to get stitching to work on
+              robot data, and more importantly, why these connections improve
+              behavior beyond demonstration data.
+            </p>
+          </div>
+        </div>
+
         <!-- SAILOR -->
         <div class="pub-row">
           <div class="media">
             <img
+              loading="lazy"
               src="images/projects/sailor.gif"
               alt="SAILOR project animation"
             />
@@ -255,7 +319,7 @@
               <b>Juntao Ren</b>, Yunhai Feng, Sanjiban Choudhury, Gokul Swamy
             </p>
             <p class="meta">
-              Neurips, 2025.
+              Neural Information Processing Systems (NeurIPS), 2025.
               <span style="color: red;"
                 >(Spotlight, Top 3% of Submissions)</span
               >
@@ -298,6 +362,7 @@
               autoplay
               muted
               loop
+              playsinline
               title="Motion Tracks demo"
             ></video>
           </div>
@@ -351,7 +416,7 @@
         <!-- Hybrid IRL -->
         <div class="pub-row">
           <div class="media">
-            <img src="images/projects/hyper.png" alt="Hybrid IRL figure" />
+            <img loading="lazy" src="images/projects/hyper.png" alt="Hybrid IRL figure" />
           </div>
           <div class="pub pub-tight">
             <p class="title links">
@@ -411,10 +476,15 @@
         <!-- MOSAIC -->
         <div class="pub-row">
           <div class="media">
-            <img
-              src="images/projects/mosaic.gif"
-              alt="MOSAIC project animation"
-            />
+            <video
+              src="images/projects/mosaic.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              title="MOSAIC demo"
+            ></video>
           </div>
           <div class="pub pub-tight">
             <p class="title links">
@@ -469,6 +539,7 @@
         <div class="pub-row">
           <div class="media">
             <img
+              loading="lazy"
               src="images/projects/clip_dn.jpg"
               alt="Distribution Normalization figure"
             />
