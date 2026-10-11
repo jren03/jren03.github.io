@@ -5,11 +5,13 @@
   --maxw: 64rem;           /* ~1024px */
   --pad-x: 1.75rem;
   --pad-x-lg: 5rem;
-  --cyan: #06b6d4;         /* regular link color */
-  --title-blue: #1e40af;   /* slightly darker blue for titles */
-  --text: #111827;
-  --muted: #4b5563;
-  --border: #e5e7eb;
+  /* Palette matches the NEEDLEWORK project page */
+  --cyan: #00528e;         /* regular link color */
+  --title-blue: #356fb0;   /* lighter blue for titles */
+  --text: #31353d;
+  --muted: #5c616a;
+  --border: #e3e4e6;
+  --highlight: #b83c41;    /* award / spotlight callouts */
 }
 
 * { box-sizing: border-box; }
@@ -121,7 +123,16 @@ a.cyan:hover { text-decoration: underline; }
 .links { margin: .05rem 0 0; }
 .links a { color: var(--cyan); text-decoration: none; }
 .links a:hover { text-decoration: underline; }
-.links .dot { margin: 0 .35rem; color: #9ca3af; }
+.links .dot { margin: 0 .35rem; color: #bbbec4; }
+.pub .title a { color: var(--title-blue); }
+.highlight { color: var(--highlight); }
+
+/* =======================
+   Projects (title + links only)
+   ======================= */
+.project { margin-top: 1rem; font-size: 1rem; line-height: 1.55; }
+.project .title { font-weight: 800; font-size: 1.0625rem; margin: 0; color: var(--title-blue); }
+.project .meta { font-style: italic; color: var(--muted); margin: .05rem 0 0; }
 
 /* TL;DR paragraph */
 .pub-summary {
